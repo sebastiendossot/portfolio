@@ -1,0 +1,11 @@
+<form name="message" class="col-sm-7" ng-submit ="sendMessage()">
+  <div class="form-group" ng-class="{'has-error': message.$dirty && message.emailContact.$invalid, 'has-success': message.emailContact.$valid}">
+    <label for="emailContact">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" ng-model="emailContact" ng-required="true">
+  </div>
+  <div class="form-group">
+  	<label for="messageContact">Message</label>
+  	<textarea class="form-control" rows="3" colomns="10" id="messageContact" ng-model="messageContact" ng-required="true" placeholder="Message"></textarea>
+	</div>
+  <button type="submit" class="btn btn-default" ng-disabled="message.$invalid">Submit</button>
+</form>
